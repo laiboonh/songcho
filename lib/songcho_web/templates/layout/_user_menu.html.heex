@@ -1,0 +1,35 @@
+<div class="dark:bg-gray-900">
+  <div class="flex flex-wrap gap-2 text-gray-300">
+    <%= if @current_user do %>
+      <%= @current_user.email %>
+      |
+      <.link
+        link_type="a"
+        to={Routes.user_settings_path(@conn, :edit)}
+        class="text-gray-700 dark:text-gray-400 hover:text-gray-900 hover:underline"
+        label="Settings"
+      />
+      |
+      <.link
+        method={:delete}
+        to={Routes.user_session_path(@conn, :delete)}
+        class="text-gray-700 dark:text-gray-400 hover:text-gray-900 hover:underline"
+        label="Log out"
+      />
+    <% else %>
+      <.link
+        link_type="a"
+        to={Routes.user_session_path(@conn, :new)}
+        class="text-gray-700 dark:text-gray-400 hover:text-gray-900 hover:underline"
+        label="Log in"
+      />
+      |
+      <.link
+        link_type="a"
+        to={Routes.user_registration_path(@conn, :new)}
+        class="text-gray-700 dark:text-gray-400 hover:text-gray-900 hover:underline"
+        label="Register"
+      />
+    <% end %>
+  </div>
+</div>
