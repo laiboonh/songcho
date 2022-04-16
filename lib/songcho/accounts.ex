@@ -6,7 +6,7 @@ defmodule Songcho.Accounts do
   import Ecto.Query, warn: false
   alias Songcho.Repo
 
-  alias Songcho.Accounts.{User, UserToken, UserNotifier}
+  alias Songcho.Accounts.{User, UserNotifier, UserToken}
 
   ## Database getters
 
