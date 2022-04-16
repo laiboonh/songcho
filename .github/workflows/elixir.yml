@@ -73,3 +73,4 @@ jobs:
           GIGALIXIR_CLEAN: true
           GIGALIXIR_USERNAME: ${{ secrets.GIGALIXIR_USERNAME }}
           GIGALIXIR_PASSWORD: ${{ secrets.GIGALIXIR_PASSWORD }}
+          MIGRATIONS: false
